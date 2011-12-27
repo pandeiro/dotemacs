@@ -16,6 +16,11 @@
 (setq make-backup-files nil)
 (auto-save-mode -1)
 
+;; C-u - C-x o is too much
+(defun back-window ()
+  (interactive)
+  (other-window -1))
+
 ;; SQLite3 for inferior sqlite process
 (setq sql-sqlite-program "sqlite3")
 
