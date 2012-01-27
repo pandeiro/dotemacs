@@ -44,4 +44,7 @@
 ;; http://stackoverflow.com/questions/1480572/how-to-have-emacs-auto-refresh-all-buffers-when-files-have-changed-on-disk
 (global-auto-revert-mode t)
 
+;; Use 'a' to open files/dirs in current Dired buffer
+(put 'dired-find-alternate-file 'disabled nil)
+
 (provide 'my-general)

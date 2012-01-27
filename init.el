@@ -19,5 +19,3 @@
 (require 'my-keys)
 (require 'my-clojure)
 
-;; Use 'a' to open files/dirs in current Dired buffer
-(put 'dired-find-alternate-file 'disabled nil)
