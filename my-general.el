@@ -3,8 +3,8 @@
 (setq-default save-place t)
 (desktop-save-mode 1)
 
-;; Line numbers
-(global-linum-mode 1)
+;; Line numbers (deactivated, wastes space)
+;(global-linum-mode 1)
 
 ;; Tchau, Menubar
 (menu-bar-mode 0)
