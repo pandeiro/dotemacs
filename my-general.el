@@ -48,7 +48,10 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;; Use windmove to enable Shift+arrow jumping from window to window
-(when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings))
+;; Except: this doesn't work because my Emacs has S-<arrow> bound to
+;; some other shit.
+;
+;(when (fboundp 'windmove-default-keybindings)
+;  (windmove-default-keybindings))
 
 (provide 'my-general)
