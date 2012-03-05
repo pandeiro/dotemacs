@@ -47,4 +47,8 @@
 ;; Use 'a' to open files/dirs in current Dired buffer
 (put 'dired-find-alternate-file 'disabled nil)
 
+;; Use windmove to enable Shift+arrow jumping from window to window
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
 (provide 'my-general)
