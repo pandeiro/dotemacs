@@ -9,9 +9,9 @@
 (global-set-key (kbd "C-c l") 'goto-line)
 
 ; http://inversethought.com/hg/hgwebdir.cgi/dotemacs/file/5f95b63347ec/dotemacs.el
-(global-set-key (kbd "C-S-j") 'windmove-down)
-(global-set-key (kbd "C-S-k") 'windmove-up)
-(global-set-key (kbd "C-S-h") 'windmove-left)
-(global-set-key (kbd "C-S-l") 'windmove-right)
+(global-set-key (kbd "C-S-<down>") 'windmove-down)
+(global-set-key (kbd "C-S-<up>") 'windmove-up)
+(global-set-key (kbd "C-S-<left>") 'windmove-left)
+(global-set-key (kbd "C-S-<right>") 'windmove-right)
 
 (provide 'my-keys)
