@@ -18,4 +18,4 @@
 (require 'my-general)
 (require 'my-keys)
 (require 'my-clojure)
-
+(require 'my-erc)
