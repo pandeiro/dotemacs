@@ -47,11 +47,8 @@
 ;; Use 'a' to open files/dirs in current Dired buffer
 (put 'dired-find-alternate-file 'disabled nil)
 
-;; Use windmove to enable Shift+arrow jumping from window to window
-;; Except: this doesn't work because my Emacs has S-<arrow> bound to
-;; some other shit.
-;
-;(when (fboundp 'windmove-default-keybindings)
-;  (windmove-default-keybindings))
+;; Use chromium to open links
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "chromium")
 
 (provide 'my-general)
