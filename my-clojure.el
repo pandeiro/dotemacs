@@ -4,7 +4,7 @@
 
 ;; ClojureScript REPL for inferior lisp mode
 (defun use-browser-repl () 
-  (setq inferior-lisp-program "browser-repl"))
+  (setq inferior-lisp-program "lein repl"))
 (add-hook 'clojurescript-mode-hook 'use-browser-repl)
 
 ;; Launch a cljs-watch shell and rename it *watch*
@@ -19,5 +19,12 @@
   (shell "*push*")
   (comint-send-string "*push*" (concat "cd " desktop-dirname "/app" 
 				       "&& couchapp autopush --update-delay 1 " "\n")))
+
+;; Launch `lein run`
+(defun make-lein-run-buffer ()
+  (interactive)
+  (shell "*lein run*")
+  (comint-send-string "*lein run*" (concat "cd " desktop-dirname
+					   "&& lein run\n")))
 
 (provide 'my-clojure)
