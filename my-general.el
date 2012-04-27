@@ -40,6 +40,9 @@
   (xterm-register-default-colors)
   (tty-set-up-initial-frame-faces))
 
+;; Turn on ansi-color-for-comint-mode for shell output buffers
+(ansi-color-for-comint-mode-on)
+
 ;; Auto-update buffers after a git branch change
 ;; http://stackoverflow.com/questions/1480572/how-to-have-emacs-auto-refresh-all-buffers-when-files-have-changed-on-disk
 (global-auto-revert-mode t)
