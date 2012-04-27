@@ -23,8 +23,8 @@
 ;; Launch `lein run`
 (defun make-lein-run-buffer ()
   (interactive)
-  (shell "*lein run*")
-  (comint-send-string "*lein run*" (concat "cd " desktop-dirname
-					   "&& lein run\n")))
+  (async-shell-command "lein run")
+  (with-current-buffer "*Async Shell Command*"
+    (rename-buffer "*lein run*")))
 
 (provide 'my-clojure)
