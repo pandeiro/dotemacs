@@ -23,7 +23,7 @@
 ;; Launch `lein run`
 (defun make-lein-run-buffer ()
   (interactive)
-  (async-shell-command "lein run")
+  (async-shell-command "lein trampoline run") ; save memory
   (with-current-buffer "*Async Shell Command*"
     (rename-buffer "*lein run*")))
 
