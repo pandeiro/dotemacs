@@ -4,7 +4,7 @@
 
 ;; ClojureScript REPL for inferior lisp mode
 (defun use-browser-repl () 
-  (setq inferior-lisp-program "lein repl"))
+  (setq inferior-lisp-program "lein trampoline cljsbuild repl-listen"))
 (add-hook 'clojurescript-mode-hook 'use-browser-repl)
 
 ;; Launch a cljs-watch shell and rename it *watch*
