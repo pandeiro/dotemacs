@@ -16,6 +16,8 @@
     (package-install p)))
                       
 (require 'my-general)
+(require 'my-util)
 (require 'my-keys)
 (require 'my-clojure)
 (require 'my-erc)
+

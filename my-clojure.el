@@ -7,24 +7,21 @@
   (setq inferior-lisp-program "lein trampoline cljsbuild repl-listen"))
 (add-hook 'clojurescript-mode-hook 'use-browser-repl)
 
-;; Launch a cljs-watch shell and rename it *watch*
-(defun make-cljs-watch-buffer ()
-  (interactive)
-  (shell "*watch*")
-  (comint-send-string "*watch*" (concat "cd " desktop-dirname "&& watch " "\n")))
-
-;; Launch a couchapp autopush shell and name it *push*
-(defun make-couchapp-autopush-buffer ()
-  (interactive)
-  (shell "*push*")
-  (comint-send-string "*push*" (concat "cd " desktop-dirname "/app" 
-				       "&& couchapp autopush --update-delay 1 " "\n")))
-
 ;; Launch `lein run`
 (defun make-lein-run-buffer ()
   (interactive)
   (async-shell-command "lein trampoline run") ; save memory
   (with-current-buffer "*Async Shell Command*"
     (rename-buffer "*lein run*")))
+
+;; Visit all relevant buffers in a Clojure web project
+(defun open-clojure-web-project ()
+  (visit-files-by-types '("html" "css" "clj" "cljs")))
+
+;; Open everything, start server, and connect CLJS browser REPL
+(defun clojure-web-jack-in ()
+  (open-clojure-web-project)
+  (make-lein-run-buffer)
+  (inferior-lisp))
 
 (provide 'my-clojure)

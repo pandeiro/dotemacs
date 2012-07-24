@@ -17,3 +17,4 @@
 (global-set-key (kbd "C-S-<right>") 'windmove-right)
 
 (provide 'my-keys)
+
