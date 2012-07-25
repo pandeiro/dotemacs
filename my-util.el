@@ -14,29 +14,30 @@
 (defun visit-file-list (files)
   "Visits all files in a list"
   (unless (null files)
-    (dolist (file files) (find-file file))))
+    (dolist (file (mapcar 'expand-file-name files)) (find-file file))))
 
-(defun list-all-dirs (dir)
-  "Returns list of dir and all nested subdirs"
+(defun list-subdirs (dir)
+  "List all nested subdirs"
   (unless (file-directory-p dir)
     (error "Not a directory `%s'" dir))
   (let ((dir (directory-file-name dir))
-	(dirs (list dir))
+	(dirs '())
 	(files (directory-files dir nil nil t)))
     (dolist (file files)
       (unless (member file '("." ".."))
 	(let ((file (concat dir "/" file)))
 	  (when (file-directory-p file)
 	    (setq dirs (append (cons file
-				     (directory-dirs file))
+				     (list-subdirs file))
 			       dirs))))))
     dirs))
 
 (defun visit-files-by-types (exts)
   "Visits all files with extensions exts in default-directory and subdirs"
-  (let ((dirs (list-all-dirs default-directory)))
+  (let ((dirs (append (list default-directory) (list-subdirs default-directory))))
     (dolist (dir dirs)
-      (mapc (lambda (ext) (visit-file-list (find-files-by-ext dir ext)))
+      (mapc (lambda (ext)
+	      (visit-file-list (find-files-by-ext dir ext)))
 	    exts))))
 
 (provide 'my-util)

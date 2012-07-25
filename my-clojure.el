@@ -18,10 +18,9 @@
 (defun open-clojure-web-project ()
   (visit-files-by-types '("html" "css" "clj" "cljs")))
 
-;; Open everything, start server, and connect CLJS browser REPL
+;; Open everything, start server
 (defun clojure-web-jack-in ()
   (open-clojure-web-project)
-  (make-lein-run-buffer)
-  (inferior-lisp))
+  (make-lein-run-buffer))
 
 (provide 'my-clojure)
