@@ -8,6 +8,7 @@
 (global-set-key (kbd "C-c j") 'nrepl-jack-in)
 (global-set-key (kbd "C-c l") 'goto-line)
 (global-set-key (kbd "C-c r") 'make-lein-run-buffer)
+(global-set-key (kbd "C-c b") 'make-lein-cljsbuild-buffer)
 
 ; http://inversethought.com/hg/hgwebdir.cgi/dotemacs/file/5f95b63347ec/dotemacs.el
 ; NOTE: These shortcuts work in xterm but the up/down ones do NOT work in gnome-terminal
