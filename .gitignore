@@ -4,4 +4,5 @@
 /url/cookies
 /tramp
 /.emacs.desktop*
+*.dat
 
