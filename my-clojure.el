@@ -10,8 +10,8 @@
   (HEAD 2)
   (ANY 2)
   (context 2)
-  (save-view 2)
-  (view-server-fns 2))
+  (save-view 1)
+  (view-server-fns 1))
 
 ;; Paredit in Clojure mode
 (defun turn-on-paredit () (paredit-mode 1))
