@@ -1,6 +1,6 @@
 (require 'clojure-mode)
 
-;; Better indentation for Compojure macros
+;; Better indentation for Compojure macros and Clutch fns
 (define-clojure-indent
   (defroutes 'defun)
   (GET 2)
@@ -9,7 +9,9 @@
   (DELETE 2)
   (HEAD 2)
   (ANY 2)
-  (context 2))
+  (context 2)
+  (save-view 2)
+  (view-server-fns 2))
 
 ;; Paredit in Clojure mode
 (defun turn-on-paredit () (paredit-mode 1))
