@@ -10,7 +10,15 @@
 (when (null package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(clojure-mode clojurescript-mode nrepl magit paredit lua-mode))
+(defvar my-packages '(clojure-mode
+		      clojurescript-mode
+		      nrepl
+		      auto-complete
+		      ac-nrepl
+		      magit
+		      paredit
+		      lua-mode))
+
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))

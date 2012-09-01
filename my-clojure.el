@@ -15,6 +15,13 @@
 (defun turn-on-paredit () (paredit-mode 1))
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
 
+;; Enable auto-completion with nREPL
+(require 'ac-nrepl)
+(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+(add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'nrepl-mode))
+
 ;; ClojureScript REPL for inferior lisp mode
 (setq cljs-inferior-lisp-cmd "lein trampoline cljsbuild repl-listen")
 
