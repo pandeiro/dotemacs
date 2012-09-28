@@ -54,4 +54,8 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "chromium")
 
+;; Setup ESS mode
+(require 'ess-site)
+
+
 (provide 'my-general)
