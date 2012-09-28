@@ -28,4 +28,5 @@
 (require 'my-util)
 (require 'my-keys)
 (require 'my-clojure)
+(require 'my-go)
 (require 'my-erc)
