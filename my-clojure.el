@@ -13,10 +13,6 @@
   (save-view 1)
   (view-server-fns 1))
 
-;; Paredit in Clojure mode
-(defun turn-on-paredit () (paredit-mode 1))
-(add-hook 'clojure-mode-hook 'turn-on-paredit)
-
 ;; Enable auto-completion with nREPL
 (require 'ac-nrepl)
 (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)

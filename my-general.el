@@ -12,6 +12,11 @@
 ;; Parenthesis matching
 (show-paren-mode t)
 
+;; Paredit in Clojure and Lisp modes
+(defun turn-on-paredit () (paredit-mode 1))
+(add-hook 'clojure-mode-hook 'turn-on-paredit)
+(add-hook 'emacs-lisp-mode-hook 'turn-on-paredit)
+
 ;; No backups and autosave files, please
 (setq make-backup-files nil)
 (auto-save-mode -1)
