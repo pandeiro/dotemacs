@@ -17,7 +17,8 @@
 		      ac-nrepl
 		      magit
 		      paredit
-		      lua-mode))
+		      lua-mode
+		      go-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
