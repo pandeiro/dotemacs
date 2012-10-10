@@ -65,6 +65,9 @@
 ;; Load Workgroups and use w/ prefix C-c w
 (require 'workgroups)
 (setq wg-prefix-key (kbd "C-c w"))
+(setq wg-morph-hsteps 8)
+(setq wg-morph-vsteps 8)
 (workgroups-mode 1)
+(wg-load "~/.workgroups-emacs")
 
 (provide 'my-general)
