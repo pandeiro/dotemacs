@@ -62,5 +62,9 @@
 ;; Setup ESS mode
 (require 'ess-site)
 
+;; Load Workgroups and use w/ prefix C-c w
+(require 'workgroups)
+(setq wg-prefix-key (kbd "C-c w"))
+(workgroups-mode 1)
 
 (provide 'my-general)

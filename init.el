@@ -17,6 +17,7 @@
 		      ac-nrepl
 		      magit
 		      paredit
+		      workgroups
 		      lua-mode
 		      go-mode))
 
