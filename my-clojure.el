@@ -3,6 +3,8 @@
 ;; Better indentation for Compojure macros and Clutch fns
 (define-clojure-indent
   (defroutes 'defun)
+  (-> 'defun)
+  (->> 'defun)
   (GET 2)
   (POST 2)
   (PUT 2)
