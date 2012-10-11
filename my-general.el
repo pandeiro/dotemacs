@@ -1,7 +1,7 @@
 ;; Simple Sessions: desktop file + saveplace
 (require 'saveplace)
 (setq-default save-place t)
-(desktop-save-mode 1)
+;(desktop-save-mode 1)
 
 ;; Line numbers (deactivated, wastes space)
 ;(global-linum-mode 1)
@@ -65,6 +65,7 @@
 ;; Load Workgroups and use w/ prefix C-c w
 (require 'workgroups)
 (setq wg-prefix-key (kbd "C-c w"))
+(setq wg-switch-on-load nil)
 (setq wg-morph-hsteps 8)
 (setq wg-morph-vsteps 8)
 (workgroups-mode 1)
