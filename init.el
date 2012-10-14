@@ -19,15 +19,18 @@
 		      paredit
 		      workgroups
 		      lua-mode
-		      go-mode))
+		      go-mode
+		      markdown-mode
+		      htmlize))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
-                      
+
 (require 'my-general)
 (require 'my-util)
 (require 'my-keys)
 (require 'my-clojure)
+(require 'my-org)
 (require 'my-go)
 (require 'my-erc)
