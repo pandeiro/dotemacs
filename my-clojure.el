@@ -116,4 +116,7 @@
   (inferior-lisp cljs-inferior-lisp-cmd)
   (show-web-buffers))
 
+;; Treat cljx like clj
+(add-to-list 'auto-mode-alist '("\\.cljx\\'" . clojure-mode))
+
 (provide 'my-clojure)
