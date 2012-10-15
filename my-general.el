@@ -32,6 +32,14 @@
 ;; JavaScript 2-space indent
 (setq js-indent-level 2)
 
+;; Bash (shell-mode) indentation tweak
+(defun alter-case-indent ()
+  "Sets up indentation of case statements in `shell-script-mode'.  Automatically added to
+`sh-mode-hook'"
+  (setq sh-indent-for-case-label 0
+        sh-indent-for-case-alt 2)
+  (add-hook 'sh-mode-hook 'alter-case-indent))
+
 ;; Kill to start of line
 (defun kill-start-of-line ()
   "kill from point to start of line"
