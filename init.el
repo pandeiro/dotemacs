@@ -21,13 +21,15 @@
 		      lua-mode
 		      go-mode
 		      markdown-mode
-		      htmlize))
+		      htmlize
+		      rainbow-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
 (require 'my-general)
+(require 'my-webdev)
 (require 'my-util)
 (require 'my-keys)
 (require 'my-clojure)

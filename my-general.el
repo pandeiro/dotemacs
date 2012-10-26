@@ -29,9 +29,6 @@
 ;; SQLite3 for inferior sqlite process
 (setq sql-sqlite-program "sqlite3")
 
-;; JavaScript 2-space indent
-(setq js-indent-level 2)
-
 ;; Bash (shell-mode) indentation tweak
 (defun alter-case-indent ()
   "Sets up indentation of case statements in `shell-script-mode'.  Automatically added to
