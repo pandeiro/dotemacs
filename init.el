@@ -15,6 +15,7 @@
 		      nrepl
 		      auto-complete
 		      ac-nrepl
+		      refheap
 		      magit
 		      paredit
 		      workgroups
