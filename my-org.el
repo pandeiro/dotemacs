@@ -1,3 +1,11 @@
+;; Specify `llpp` to open pdfs and feh to open jpgs and pngs
+(setq org-file-apps ((auto-mode . emacs)
+		     ("\\.mm\\'" . default)
+		     ("\\.x?html?\\'" . default)
+		     ("pdf" . "llpp %s")
+		     ("jpg" . "feh %s")
+		     ("png" . "feh %s")))
+
 ;; from https://github.com/lambdatronic/org-babel-example
 
 ;; Add org-babel support
