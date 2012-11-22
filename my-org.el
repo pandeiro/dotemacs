@@ -15,14 +15,12 @@
 (defun set-org-mode-shift-replacements ()
   (setq org-disputed-keys
 	'(([control shift left] .  [(meta shift -)])
-	  ([control shift right] . [(meta shift +)])
-	  ([control shift up] .    [(meta p)])
-	  ([control shift down] .  [(meta n)]))))
-;; Make windmove work in org-mode:
-(add-hook 'org-shiftup-final-hook 'windmove-up)
-(add-hook 'org-shiftleft-final-hook 'windmove-left)
-(add-hook 'org-shiftdown-final-hook 'windmove-down)
-(add-hook 'org-shiftright-final-hook 'windmove-right)
+	  ([control shift right] . [(meta shift +)]))))
+
+(add-hook 'org-mode-hook 'unbind-org-mode-control-shift-up-and-down)
+(defun unbind-org-mode-control-shift-up-and-down ()
+  (define-key org-mode-map (kbd "<C-S-up>") nil)
+  (define-key org-mode-map (kbd "<C-S-down>") nil))
 
 ;; from https://github.com/lambdatronic/org-babel-example
 
