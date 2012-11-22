@@ -1,10 +1,28 @@
+;; Autohide leading stars
+(setq org-hide-leading-stars t)
+
 ;; Specify `llpp` to open pdfs and feh to open jpgs and pngs
-(setq org-file-apps ((auto-mode . emacs)
-		     ("\\.mm\\'" . default)
-		     ("\\.x?html?\\'" . default)
-		     ("pdf" . "llpp %s")
-		     ("jpg" . "feh %s")
-		     ("png" . "feh %s")))
+(add-hook 'org-mode-hook 'set-org-mode-app-defaults)
+(defun set-org-mode-app-defaults ()
+  (setq org-file-apps
+	'(("pdf" . "llpp %s")
+	  ("jpg" . "feh %s")
+	  ("png" . "feh %s"))))
+
+;; Override C-S-arrows b/c they are used for window movement
+(setq org-replace-disputed-keys t)
+(add-hook 'org-mode-hook 'set-org-mode-shift-replacements)
+(defun set-org-mode-shift-replacements ()
+  (setq org-disputed-keys
+	'(([control shift left] .  [(meta shift -)])
+	  ([control shift right] . [(meta shift +)])
+	  ([control shift up] .    [(meta p)])
+	  ([control shift down] .  [(meta n)]))))
+;; Make windmove work in org-mode:
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
 
 ;; from https://github.com/lambdatronic/org-babel-example
 
