@@ -6,8 +6,9 @@
 ;; Line numbers (deactivated, wastes space)
 ;(global-linum-mode 1)
 
-;; Tchau, Menubar
+;; Tchau, Menubar, Toolbar
 (menu-bar-mode 0)
+(tool-bar-mode 0)
 
 ;; Parenthesis matching
 (show-paren-mode t)
