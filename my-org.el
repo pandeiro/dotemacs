@@ -1,5 +1,5 @@
 ;; Set agenda
-(setq org-agenda-files "~/org")
+(setq org-agenda-files '("~/org"))
 
 ;; Autohide leading stars
 (setq org-hide-leading-stars t)
