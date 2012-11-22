@@ -6,12 +6,19 @@
 ;; Line numbers (deactivated, wastes space)
 ;(global-linum-mode 1)
 
-;; Tchau, Menubar, Toolbar
+;; Tchau, Menubar, Toolbar, big Fringe
 (menu-bar-mode 0)
 (tool-bar-mode 0)
+(set-fringe-mode '(1 . 1))
+
+;; Custom scrollbars now defined in ~/.config/gtk-3.0/gtk.css
+; (scroll-bar-mode -1)
 
 ;; Parenthesis matching
 (show-paren-mode t)
+
+;; Default font
+(set-face-attribute 'default nil :height 90 :family "Inconsolata")
 
 ;; Paredit in Clojure and Lisp modes
 (defun turn-on-paredit () (paredit-mode 1))
