@@ -64,8 +64,8 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "chromium")
 
-;; Setup ESS mode
-(require 'ess-site)
+;; Setup ESS mode - commented while not doing stats work
+;(require 'ess-site)
 
 ;; Load Workgroups and use w/ prefix C-c w
 (require 'workgroups)
