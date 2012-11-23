@@ -2,13 +2,13 @@
 
 (global-set-key (kbd "C-x p") 'back-window)
 
-(global-set-key (kbd "C-c k") 'kill-start-of-line)
+; (global-set-key (kbd "C-c k") 'kill-start-of-line)
 (global-set-key (kbd "C-c s") 'eshell)
 (global-set-key (kbd "C-c g") 'magit-status)
-(global-set-key (kbd "C-c j") 'nrepl-jack-in)
+(global-set-key (kbd "C-c j") 'nrepl-jack-in) ; TODO move to Clojure mode hook!
 (global-set-key (kbd "C-c l") 'goto-line)
-(global-set-key (kbd "C-c r") 'make-lein-run-buffer)
-(global-set-key (kbd "C-c b") 'make-lein-cljsbuild-buffer)
+; (global-set-key (kbd "C-c r") 'make-lein-run-buffer)
+; (global-set-key (kbd "C-c b") 'make-lein-cljsbuild-buffer)
 
 ;; As suggested by org-mode itself
 (global-set-key "\C-cl" 'org-store-link)
