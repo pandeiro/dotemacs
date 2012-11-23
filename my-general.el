@@ -79,8 +79,9 @@
 (require 'workgroups)
 (setq wg-prefix-key (kbd "C-c w"))
 (setq wg-switch-on-load nil)
-(setq wg-morph-hsteps 8)
-(setq wg-morph-vsteps 8)
+(setq wg-morph-on nil)
+;(setq wg-morph-hsteps 8)
+;(setq wg-morph-vsteps 8)
 (workgroups-mode 1)
 (wg-load "~/.workgroups-emacs")
 
