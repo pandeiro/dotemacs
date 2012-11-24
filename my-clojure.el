@@ -22,12 +22,17 @@
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'nrepl-mode))
 
-;; ClojureScript REPL for inferior lisp mode
-(setq cljs-inferior-lisp-cmd "lein trampoline cljsbuild repl-listen")
+;; ClojureScript REPLs for inferior lisp mode
+(setq cljs-browser-repl-cmd "lein trampoline cljsbuild repl-listen")
+(setq cljs-rhino-repl-cmd "lein trampoline cljsbuild repl-rhino")
 
 (defun use-browser-repl () 
-  (setq inferior-lisp-program cljs-inferior-lisp-cmd))
-(add-hook 'clojurescript-mode-hook 'use-browser-repl)
+  (setq inferior-lisp-program cljs-browser-repl-cmd))
+
+(defun use-rhino-repl ()
+  (setq inferior-lisp-program cljs-rhino-repl-cmd))
+
+(add-hook 'clojurescript-mode-hook 'use-browser-repl) ; Use browser REPL by default
 
 ;; Launch `lein run`
 (defun make-lein-run-buffer ()
