@@ -7,3 +7,6 @@
 *.dat
 
 /.org-id-locations
+
+/elnode/*
+/eshell/*
