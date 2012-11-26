@@ -16,6 +16,8 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+;; Start an HTTP server (with Elnode) w/ a particular docroot and port
+(global-set-key (kbd "C-c h") 'elnode-make-webserver)
 
 ; http://inversethought.com/hg/hgwebdir.cgi/dotemacs/file/5f95b63347ec/dotemacs.el
 ; NOTE: These shortcuts work in xterm but the up/down ones do NOT work in gnome-terminal
