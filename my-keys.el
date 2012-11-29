@@ -7,6 +7,11 @@
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c j") 'nrepl-jack-in) ; TODO move to Clojure mode hook!
 (global-set-key (kbd "C-c l") 'goto-line)
+
+;; Load and save desktops
+(global-set-key (kbd "C-c d") 'desktop-read)
+(global-set-key (kbd "C-c D") 'save-desktop-to-default-location)
+
 ; (global-set-key (kbd "C-c r") 'make-lein-run-buffer)
 ; (global-set-key (kbd "C-c b") 'make-lein-cljsbuild-buffer)
 
