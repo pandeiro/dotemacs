@@ -1,16 +1,26 @@
 ;; Simple Sessions: desktop file + saveplace
+;;
+;; Don't open desktop files by default, but setup environment
+;; for using one single global desktop file in ~/.config/emacs
+(setq desktop-path (list "~/.config/emacs"))
+(setq desktop-dirname "~/.config/emacs")
+(setq desktop-base-file-name "desktop.el")
+(defun save-desktop-to-default-location ()
+  "Saves the buffer list as a desktop file to the default location and releases the desktop file lock"
+  (interactive)
+  (desktop-save desktop-dirname t))
+
 (require 'saveplace)
 (setq-default save-place t)
-;(desktop-save-mode 1)
+
+;; No backups and autosave files, please
+(setq make-backup-files nil)
+(auto-save-mode -1)
 
 ;; Paredit in Clojure and Lisp modes
 (defun turn-on-paredit () (paredit-mode 1))
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
 (add-hook 'emacs-lisp-mode-hook 'turn-on-paredit)
-
-;; No backups and autosave files, please
-(setq make-backup-files nil)
-(auto-save-mode -1)
 
 ;; C-u - C-x o is too much
 (defun back-window ()
