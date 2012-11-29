@@ -33,6 +33,6 @@
 ;(setq wg-morph-hsteps 8)
 ;(setq wg-morph-vsteps 8)
 (workgroups-mode 1)
-(wg-load "~/.workgroups-emacs")
+(wg-load "~/.config/emacs/workgroups.el")
 
 (provide 'my-ui)
