@@ -22,7 +22,8 @@
 		      lua-mode
 		      go-mode
 		      markdown-mode
-		      rainbow-mode))
+		      rainbow-mode
+		      solarized-theme))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
