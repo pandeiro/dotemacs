@@ -22,6 +22,9 @@
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
 (add-hook 'emacs-lisp-mode-hook 'turn-on-paredit)
 
+;; No Shift selection
+(setq-default shift-select-mode nil)
+
 ;; C-u - C-x o is too much
 (defun back-window ()
   (interactive)
