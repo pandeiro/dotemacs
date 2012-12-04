@@ -15,12 +15,35 @@
 ;; Default font
 (set-face-attribute 'default nil :height 90 :family "Inconsolata")
 
-;; Use Solarized with one custom tweak: no fringes
-(load-theme 'solarized-light 1)
-(custom-theme-set-faces
- 'solarized-light
- `(fringe ((((class color) (min-colors 89))
-	    (:foreground nil :background nil)))))
+;; Blinking bar cursor, invisible in non-selected windows
+(setq cursor-in-non-selected-windows nil)
+(setq-default cursor-type 'bar)
+(blink-cursor-mode t)
+
+;; Highlight line
+(global-hl-line-mode t)
+
+;; Use Solarized light and dark with one custom tweak: no fringes
+(defun apply-solarized-light ()
+  (interactive)
+  (scroll-bar-mode)
+  (load-theme 'solarized-light 1)
+  (custom-theme-set-faces
+   'solarized-light
+   `(fringe ((((class color) (min-colors 89))
+	      (:foreground nil :background nil))))))
+
+(defun apply-solarized-dark ()
+  (interactive)
+  (scroll-bar-mode -1)
+  (load-theme 'solarized-dark 1)
+  (custom-theme-set-faces
+   'solarized-dark
+   `(fringe ((((class color) (min-colors 89))
+	      (:foreground nil :background nil))))))
+
+;; Load Solarized light by default
+(apply-solarized-light)
 
 ;; Turn on ansi-color-for-comint-mode for shell output buffers
 (ansi-color-for-comint-mode-on)
