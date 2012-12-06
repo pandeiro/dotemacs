@@ -1,3 +1,6 @@
+;; Optimize indentation for outline-style documents
+(setq org-startup-indented t)
+
 ;; Set agenda
 (setq org-agenda-files '("~/org"))
 
