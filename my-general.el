@@ -17,6 +17,10 @@
 (setq make-backup-files nil)
 (auto-save-mode -1)
 
+(defun open-my-config-dir ()
+  (interactive)
+  (dired "~/.emacs.d"))
+
 ;; Paredit in Clojure and Lisp modes
 (defun turn-on-paredit () (paredit-mode 1))
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
