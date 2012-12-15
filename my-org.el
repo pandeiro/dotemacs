@@ -29,6 +29,8 @@
   (define-key org-mode-map (kbd "<C-S-down>") nil))
 
 ;; Custom man link type (taken from Info)
+(require 'org)
+
 (org-add-link-type "man" 'org-man-open)
 (add-hook 'org-store-link-functions 'org-man-store-link)
 
