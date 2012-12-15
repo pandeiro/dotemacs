@@ -17,6 +17,11 @@
 (setq make-backup-files nil)
 (auto-save-mode -1)
 
+;; Find and open things with ido
+(require 'ido)
+(ido-mode t)
+
+;; Emacs adjustments made here, bound to C-c e
 (defun open-my-config-dir ()
   (interactive)
   (dired "~/.emacs.d"))
