@@ -26,6 +26,9 @@
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
 (add-hook 'emacs-lisp-mode-hook 'turn-on-paredit)
 
+;; Replace yes/no questions with y/n
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; No Shift selection
 (setq-default shift-select-mode nil)
 
