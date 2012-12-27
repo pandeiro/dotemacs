@@ -28,6 +28,11 @@
   (define-key org-mode-map (kbd "<C-S-up>") nil)
   (define-key org-mode-map (kbd "<C-S-down>") nil))
 
+;; *scratch* initial msg advertises this binding
+(add-hook 'org-mode-hook 'bind-src-fontify)
+(defun bind-src-fontify ()
+  (define-key org-mode-map (kbd "C-c C-h") 'org-src-fontify-buffer))
+
 ;; Custom man link type (taken from Info)
 (require 'org)
 
