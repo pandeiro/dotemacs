@@ -1,4 +1,6 @@
 ;; My key-bindings, all in one place
+;;
+;; Note: global key-bindings only. Mode-specific bindings are in relevant file
 
 (global-set-key (kbd "C-x p") 'back-window)
 
