@@ -12,4 +12,7 @@
 ;; don't show any of this
 (setq erc-hide-list '("JOIN" "PART" "QUIT" "NICK"))
 
+;; open IRC buffers in background by default
+(setq erc-join-buffer 'bury)
+
 (provide 'my-erc)
