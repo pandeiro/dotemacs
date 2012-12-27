@@ -5,6 +5,9 @@
 (defun in-rainbows () (rainbow-mode 1))
 (add-hook 'css-mode-hook 'in-rainbows)
 
+;; Open markdown in markdown-mode
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+
 ;;
 ;; Elnode customizations
 ;;
