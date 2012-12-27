@@ -65,6 +65,11 @@
 
 ;; Working with source code
 
+;; Tangle on by default
+(setq org-babel-default-header-args
+      (cons '(:tangle . "yes")
+	    (assq-delete-all :tangle org-babel-default-header-args)))
+
 ;; Evaluate the following other languages besides emacs-lisp in source blocks:
 ;; - JavaScript
 (org-babel-do-load-languages
