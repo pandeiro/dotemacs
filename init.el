@@ -20,6 +20,7 @@
 		      paredit
 		      workgroups
 		      lua-mode
+		      js-comint
 		      go-mode
 		      markdown-mode
 		      rainbow-mode
