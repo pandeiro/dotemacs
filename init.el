@@ -39,4 +39,4 @@
 (require 'my-org)
 (require 'my-go)
 (require 'my-erc)
-
+(require 'my-scratch)
