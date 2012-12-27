@@ -69,7 +69,11 @@
 ;; - JavaScript
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((js . t)))
+ '((js . t)
+   (clojure . t)
+   (emacs-lisp . t)
+   (python . t)
+   (sh . t)))
 
 
 (provide 'my-org)
