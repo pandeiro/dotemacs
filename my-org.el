@@ -31,7 +31,10 @@
 ;; *scratch* initial msg advertises this binding
 (add-hook 'org-mode-hook 'bind-src-fontify)
 (defun bind-src-fontify ()
-  (define-key org-mode-map (kbd "C-c C-h") 'org-src-fontify-buffer))
+  (define-key org-mode-map (kbd "C-c C-h") (lambda ()
+					     (interactive)
+					     (progn (org-src-fontify-buffer)
+						    (message "Colors!!!11!")))))
 
 ;; Custom man link type (taken from Info)
 (require 'org)
