@@ -1,3 +1,6 @@
+;; This is where I am storing elisp functions that I write from scratch, not
+;; just customizations and specific mode-related stuff
+
 (defun filter (condp lst)
   "Functional programming 101"
   (delq nil (mapcar (lambda (x) (and (funcall condp x) x)) lst)))
