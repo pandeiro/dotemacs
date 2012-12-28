@@ -88,6 +88,9 @@
    (python . t)
    (sh . t)))
 
+;; Eval w/o confirming
+(setq org-confirm-babel-evaluate nil)
+
 ;; Clojure-specific
 ;;
 ;; org-babel Clojure support is built to work with Swank/SLIME, which is no longer
