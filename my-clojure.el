@@ -23,13 +23,20 @@
   '(add-to-list 'ac-modes 'nrepl-mode))
 
 ;; ClojureScript REPLs for inferior lisp mode
-(setq cljs-browser-repl-cmd "lein trampoline cljsbuild repl-listen")
-(setq cljs-rhino-repl-cmd "lein trampoline cljsbuild repl-rhino")
+(defvar cljs-browser-repl-cmd
+  "lein trampoline cljsbuild repl-listen"
+  "Sets the command that clojurescript-mode uses when it calls inferior-lisp mode,
+unless use-rhino-repl has been invoked")
 
-(defun use-browser-repl () 
+(defvar cljs-rhino-repl-cmd
+  "lein trampoline cljsbuild repl-rhino"
+  "Sets the command that clojurescript-mode uses when it calls inferior-lisp mode
+if use-rhino-repl has been invoked")
+
+(defun use-browser-repl () (interactive)
   (setq inferior-lisp-program cljs-browser-repl-cmd))
 
-(defun use-rhino-repl ()
+(defun use-rhino-repl () (interactive)
   (setq inferior-lisp-program cljs-rhino-repl-cmd))
 
 (add-hook 'clojurescript-mode-hook 'use-browser-repl) ; Use browser REPL by default
