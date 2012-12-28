@@ -36,6 +36,9 @@
 					     (progn (org-src-fontify-buffer)
 						    (message "Colors!!!11!")))))
 
+;; native colors
+(setq org-src-fontify-natively t)
+
 ;; Custom man link type (taken from Info)
 (require 'org)
 
