@@ -89,7 +89,8 @@
    (clojure . t)
    (emacs-lisp . t)
    (python . t)
-   (sh . t)))
+   (sh . t)
+   (c . t)))
 
 ;; Eval w/o confirming
 (setq org-confirm-babel-evaluate nil)
