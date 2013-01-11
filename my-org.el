@@ -90,7 +90,7 @@
    (emacs-lisp . t)
    (python . t)
    (sh . t)
-   (c . t)))
+   (C . t)))
 
 ;; Eval w/o confirming
 (setq org-confirm-babel-evaluate nil)
