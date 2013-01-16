@@ -2,6 +2,9 @@
 ;;
 ;; Note: global key-bindings only. Mode-specific bindings are in relevant file
 
+; jump to end of word, then beginning of next, then end, etc
+(global-set-key (kbd "C-c f") 'forward-same-syntax)
+
 (global-set-key (kbd "C-x p") 'back-window)
 
 ; (global-set-key (kbd "C-c k") 'kill-start-of-line)
