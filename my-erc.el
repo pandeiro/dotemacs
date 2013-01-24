@@ -2,7 +2,8 @@
 (erc-autojoin-mode 1)
 (setq erc-autojoin-channels-alist
       '(("freenode.net" "#emacs" "#org-mode" "#clojure" "##javascript" "#archlinux"
-	 "##linux" "#bash" "#git" "#html5" "##twitter-bootstrap" "#couchdb")))
+	 "##linux" "#bash" "#git" "#html5" "##twitter-bootstrap" "#couchdb")
+	("oftc.net" "#awesome")))
 
 ;; http://emacs-fu.blogspot.com/2009/06/erc-emacs-irc-client.html
 ;; check channels
