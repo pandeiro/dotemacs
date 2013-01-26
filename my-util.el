@@ -17,6 +17,12 @@ mini-buffer. Gives totals for up to point, from point to end of buffer, and tota
 	(output "Done: %d chars; To-do: %d chars; Total: %d chars"))
     (message (apply 'format output (list before-point after-point (+ before-point after-point))))))
 
+(defun current-region-or-word ()
+  (or (and transient-mark-mode mark-active
+	   (buffer-substring-no-properties
+	    (region-beginning) (region-end)))
+      (current-word)))
+
 ;;
 ;; Functions to open buffers on all a project's files filtered by extension
 ;;
