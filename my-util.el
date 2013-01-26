@@ -5,6 +5,18 @@
   "Functional programming 101"
   (delq nil (mapcar (lambda (x) (and (funcall condp x) x)) lst)))
 
+(defun remove-whitespace (str)
+  (replace-regexp-in-string "[\s\t\n]+" "" str))
+
+(defun count-chars ()
+  "Counts all non-whitespace characters in the current buffer and outputs results to
+mini-buffer. Gives totals for up to point, from point to end of buffer, and total."
+  (interactive)
+  (let ((before-point (length (remove-whitespace (buffer-substring (point-min) (point)))))
+	(after-point (length (remove-whitespace (buffer-substring (point) (point-max)))))
+	(output "Done: %d chars; To-do: %d chars; Total: %d chars"))
+    (message (apply 'format output (list before-point after-point (+ before-point after-point))))))
+
 ;;
 ;; Functions to open buffers on all a project's files filtered by extension
 ;;
