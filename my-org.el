@@ -13,7 +13,8 @@
   (setq org-file-apps
 	'(("pdf" . "llpp %s")
 	  ("jpg" . "feh %s")
-	  ("png" . "feh %s"))))
+	  ("png" . "feh %s")
+	  ("xcf" . "gimp %s"))))
 
 ;; Override C-S-arrows b/c they are used for window movement
 (setq org-replace-disputed-keys t)
