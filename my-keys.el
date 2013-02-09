@@ -16,9 +16,6 @@
 ;; Open Emacs config dir
 (global-set-key (kbd "C-c e") 'open-my-config-dir)
 
-;; Start a new project
-(global-set-key (kbd "C-c n") 'start-new-project)
-
 ;; Load and save desktops
 (global-set-key (kbd "C-c d") 'desktop-read)
 (global-set-key (kbd "C-c D") 'save-desktop-to-default-location)
