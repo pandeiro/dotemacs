@@ -42,5 +42,10 @@
 (global-set-key (kbd "C-S-<left>") 'windmove-left)
 (global-set-key (kbd "C-S-<right>") 'windmove-right)
 
+; Dired stuff
+(add-hook 'dired-mode-hook
+	  (lambda ()
+	    (define-key dired-mode-map (kbd "I") 'dired-insert-subdir-stay-put)))
+
 (provide 'my-keys)
 

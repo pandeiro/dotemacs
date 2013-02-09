@@ -97,4 +97,12 @@ mini-buffer. Gives totals for up to point, from point to end of buffer, and tota
   (interactive)
   (indent-region (point-min) (point-max)))
 
+(defun dired-insert-subdir-stay-put ()
+  (interactive)
+  (when (eq 'dired-mode major-mode)
+    (let ((dir (dired-file-name-at-point)))
+      (dired-maybe-insert-subdir dir)
+      (set-mark-command 4)
+      (message (concat dir " inserted below")))))
+
 (provide 'my-util)
