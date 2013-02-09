@@ -1,6 +1,4 @@
 ;; My key-bindings, all in one place
-;;
-;; Note: global key-bindings only. Mode-specific bindings are in relevant file
 
 ; jump to end of word, then beginning of next, then end, etc
 (global-set-key (kbd "C-c f") 'forward-same-syntax)
