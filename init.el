@@ -42,3 +42,4 @@
 (require 'my-go)
 (require 'my-erc)
 (require 'my-scratch)
+(require 'my-c)
