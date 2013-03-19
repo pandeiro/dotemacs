@@ -7,6 +7,9 @@
 ;; Autohide leading stars
 (setq org-hide-leading-stars t)
 
+;; alphabetical lists
+(setq org-alphabetical-lists t)
+
 ;; Specify `llpp` to open pdfs and feh to open jpgs and pngs
 (add-hook 'org-mode-hook 'set-org-mode-app-defaults)
 (defun set-org-mode-app-defaults ()
