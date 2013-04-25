@@ -49,7 +49,7 @@
 (org-add-link-type "man" 'org-man-open)
 (add-hook 'org-store-link-functions 'org-man-store-link)
 
-(defcustom org-man-command 'man
+(defcustom org-man-command 'woman
   "The Emacs command to be used to display a man page."
   :group 'org-link
   :type '(choice (const man) (const woman)))
@@ -124,5 +124,9 @@
                  (buffer-substring-no-properties (point-min) (point-max))
                  (cdr (assoc :package params)))
                 :value))))
+
+;; Capture stuff
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+
 
 (provide 'my-org)
