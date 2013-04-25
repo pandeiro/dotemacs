@@ -105,6 +105,9 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "chromium")
 
+;; enable lower-casing regions
+(put 'downcase-region 'disabled nil)
+
 ;; Setup ESS mode - commented while not doing stats work
 ;(require 'ess-site)
 
