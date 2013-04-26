@@ -42,8 +42,17 @@
    `(fringe ((((class color) (min-colors 89))
 	      (:foreground nil :background nil))))))
 
+(defun apply-zenburn ()
+  (interactive)
+  (scroll-bar-mode -1)
+  (load-theme 'zenburn-theme 1)
+  (custom-theme-set-faces
+   'solarized-dark
+   `(fringe ((((class color) (min-colors 89))
+	      (:foreground nil :background nil))))))
+
 ;; Load Solarized light by default
-(apply-solarized-light)
+(apply-zenburn)
 
 ;; Turn on ansi-color-for-comint-mode for shell output buffers
 (ansi-color-for-comint-mode-on)
