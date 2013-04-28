@@ -4,16 +4,16 @@
 ;; Tchau, Menubar, Toolbar, big Fringe
 (menu-bar-mode 0)
 (tool-bar-mode 0)
-(set-fringe-mode '(1 . 1))
+;(set-fringe-mode '(0 . 0))
 
 ;; Custom scrollbars now defined in ~/.config/gtk-3.0/gtk.css
-; (scroll-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; Parenthesis matching
 (show-paren-mode t)
 
 ;; Default font
-(set-face-attribute 'default nil :height 90 :family "Inconsolata")
+(set-face-attribute 'default nil :height 100 :family "Inconsolata")
 
 ;; Blinking bar cursor, invisible in non-selected windows
 (setq cursor-in-non-selected-windows nil)
@@ -45,11 +45,7 @@
 (defun apply-zenburn ()
   (interactive)
   (scroll-bar-mode -1)
-  (load-theme 'zenburn-theme 1)
-  (custom-theme-set-faces
-   'solarized-dark
-   `(fringe ((((class color) (min-colors 89))
-	      (:foreground nil :background nil))))))
+  (load-theme 'zenburn 1))
 
 ;; Load Solarized light by default
 (apply-zenburn)
