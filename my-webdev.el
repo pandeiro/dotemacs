@@ -8,12 +8,6 @@
 ;; Open markdown in markdown-mode
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
-;;
-;; Elnode customizations
-;;
-;; Don't start webserver automatically
-(setq elnode-do-init nil)
-
 ;; todo: customize elnode-webserver-index-file-template & elnode-webserver-index-page-template
 
 ;; Use nodejs as inferior javascript process
