@@ -21,6 +21,7 @@
 		      magit
 		      paredit
 		      workgroups
+		      elnode
 		      lua-mode
 		      js-comint
 		      go-mode
