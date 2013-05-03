@@ -27,7 +27,8 @@
 		      go-mode
 		      markdown-mode
 		      rainbow-mode
-		      solarized-theme))
+		      solarized-theme
+		      gist))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
