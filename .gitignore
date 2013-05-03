@@ -19,3 +19,5 @@ startup.org
 /emms/*
 
 .netrc
+
+var/pcache/*
