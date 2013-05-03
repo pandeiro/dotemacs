@@ -32,6 +32,18 @@
   (define-key org-mode-map (kbd "<C-S-up>") nil)
   (define-key org-mode-map (kbd "<C-S-down>") nil))
 
+;; Bind C-up/down to previous/next-src-block when in src block
+(add-hook 'org-mode-hook 'bind-src-nav-keys)
+(defun bind-src-nav-keys ()
+  (define-key org-mode-map (kbd "<C-up>")
+    (lambda ()
+      (interactive)
+      (when (org-in-block-p '("src")) (org-babel-previous-src-block))))
+  (define-key org-mode-map (kbd "<C-down>")
+    (lambda ()
+      (interactive)
+      (when (org-in-block-p '("src")) (org-babel-next-src-block)))))
+
 ;; *scratch* initial msg advertises this binding
 (add-hook 'org-mode-hook 'bind-src-fontify)
 (defun bind-src-fontify ()
@@ -127,6 +139,5 @@
 
 ;; Capture stuff
 (setq org-default-notes-file (concat org-directory "/notes.org"))
-
 
 (provide 'my-org)
