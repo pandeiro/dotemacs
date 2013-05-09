@@ -140,4 +140,7 @@
 ;; Capture stuff
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 
+;; HTML export
+(setq org-export-html-postamble nil) ;; no author info, etc by default
+
 (provide 'my-org)
