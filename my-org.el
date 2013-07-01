@@ -106,7 +106,8 @@
    (emacs-lisp . t)
    (python . t)
    (sh . t)
-   (C . t)))
+   (C . t)
+   (go . t)))
 
 ;; Eval w/o confirming
 (setq org-confirm-babel-evaluate nil)
