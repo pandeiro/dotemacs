@@ -28,7 +28,8 @@
 		      markdown-mode
 		      rainbow-mode
 		      solarized-theme
-		      gist))
+		      gist
+		      skewer-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
