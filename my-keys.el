@@ -42,5 +42,8 @@
 	  (lambda ()
 	    (define-key dired-mode-map (kbd "I") 'dired-insert-subdir-stay-put)))
 
+; Quick keyboard macros with F1 (http://www.emacswiki.org/emacs/KeyboardMacros)
+(global-set-key '[(f1)]          'call-last-kbd-macro)
+(global-set-key '[(shift f1)]    'toggle-kbd-macro-recording-on)
 (provide 'my-keys)
 
