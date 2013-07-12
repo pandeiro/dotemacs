@@ -7,7 +7,7 @@
 (set-fringe-mode '(0 . 0))
 
 ;; Custom scrollbars now defined in ~/.config/gtk-3.0/gtk.css
-(scroll-bar-mode -1)
+;(scroll-bar-mode -1)
 
 ;; Parenthesis matching
 (show-paren-mode t)
@@ -48,7 +48,7 @@
   (load-theme 'zenburn 1))
 
 ;; Load Solarized light by default
-(apply-zenburn)
+(apply-solarized-light)
 
 ;; Turn on ansi-color-for-comint-mode for shell output buffers
 (ansi-color-for-comint-mode-on)
