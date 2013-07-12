@@ -4,7 +4,7 @@
 ;; Tchau, Menubar, Toolbar, big Fringe
 (menu-bar-mode 0)
 (tool-bar-mode 0)
-;(set-fringe-mode '(0 . 0))
+(set-fringe-mode '(0 . 0))
 
 ;; Custom scrollbars now defined in ~/.config/gtk-3.0/gtk.css
 (scroll-bar-mode -1)
