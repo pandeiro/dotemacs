@@ -28,7 +28,7 @@
 	   (replace-regexp-in-string "\033\\[[0-9]+[GJK]" "" output)))))
 
 ;; Use web-mode
-(require 'web-mode)
+;(require 'web-mode)
 ;(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 
 (provide 'my-webdev)
