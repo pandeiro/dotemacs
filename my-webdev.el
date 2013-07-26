@@ -31,4 +31,7 @@
 ;(require 'web-mode)
 ;(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 
+;; Interactive browser development
+(setq httpd-root "~/rt/browser")
+
 (provide 'my-webdev)
