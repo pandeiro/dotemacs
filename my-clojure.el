@@ -131,4 +131,13 @@ if use-rhino-repl has been invoked")
 ;; Treat cljx like clj
 (add-to-list 'auto-mode-alist '("\\.cljx\\'" . clojure-mode))
 
+;; Open a Clojure REPL with all the basic libs from the $HOME/rt/clj project
+(defun clojure-open-nrepl ()
+  (interactive)
+  (let ((current-dir (nrepl-current-dir))
+	(rt "~/rt/clj/"))
+    (cd rt)
+    (nrepl-jack-in)
+    (cd current-dir)))
+
 (provide 'my-clojure)
