@@ -1,3 +1,7 @@
+;; Customizations via GUI don't pollute this file
+(setq custom-file "~/.emacs.d/my-custom.el")
+(load custom-file)
+
 ;; Package management with Marmalade repo
 (add-to-list 'load-path "~/.emacs.d/")
 (require 'package)
