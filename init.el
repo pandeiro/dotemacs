@@ -33,7 +33,8 @@
 		      rainbow-mode
 		      solarized-theme
 		      gist
-		      skewer-mode))
+		      skewer-mode
+		      s))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
