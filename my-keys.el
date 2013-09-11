@@ -9,7 +9,9 @@
 (global-set-key (kbd "C-c s") 'eshell)
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c j") 'nrepl-jack-in) ; TODO move to Clojure mode hook!
-(global-set-key (kbd "C-c n") 'clojure-open-nrepl)
+(global-set-key (kbd "C-c n") 'next-logical-line)
+(global-set-key (kbd "C-c p") 'previous-logical-line)
+(global-set-key (kbd "C-c r") 'clojure-open-nrepl)
 (global-set-key (kbd "C-c l") 'goto-line)
 
 ;; Open Emacs config dir
