@@ -28,6 +28,7 @@
 		      elnode
 		      lua-mode
 		      js-comint
+		      nodejs-repl
 		      go-mode
 		      markdown-mode
 		      rainbow-mode
