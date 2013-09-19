@@ -23,6 +23,33 @@ mini-buffer. Gives totals for up to point, from point to end of buffer, and tota
 	    (region-beginning) (region-end)))
       (current-word)))
 
+;; from Fuco (http://paste.lisp.org/display/138989)
+;;
+;; (Depends on s.el)
+(defun create-scratch-buffer (mode)
+  "Create a new scratch buffer to work in. (could be *scratch* - *scratchX*)"
+  (interactive (list (if current-prefix-arg
+                         (intern
+                          (ido-completing-read
+                           "Major mode to set: "
+                           (let (r)
+                             (mapatoms
+                              (lambda (x)
+                                (when (s-suffix? "-mode" (symbol-name x))
+                                  (push x r))))
+                             (mapcar 'symbol-name r))))
+                       'emacs-lisp-mode)))
+  (let ((n 0)
+        bufname)
+    (while (progn
+             (setq bufname (concat "*scratch"
+                                   (if (= n 0) "" (int-to-string n))
+                                   "*"))
+             (setq n (1+ n))
+             (get-buffer bufname)))
+    (switch-to-buffer (get-buffer-create bufname))
+    (call-interactively mode)))
+
 ;;
 ;; Functions to open buffers on all a project's files filtered by extension
 ;;
