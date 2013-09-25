@@ -27,6 +27,9 @@
 	 (lambda (output)
 	   (replace-regexp-in-string "\033\\[[0-9]+[GJK]" "" output)))))
 
+;; run nodejs-repl from node runtime directory (so libs are accessible)
+(setq nodejs-repl-command "cd ~/rt/node && node")
+
 ;; Use web-mode
 ;(require 'web-mode)
 ;(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
