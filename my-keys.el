@@ -13,6 +13,7 @@
 (global-set-key (kbd "C-c p") 'previous-logical-line)
 (global-set-key (kbd "C-c r") 'clojure-open-nrepl)
 (global-set-key (kbd "C-c l") 'goto-line)
+(global-set-key (kbd "C-c C-d") 'delete-file-of-current-buffer)
 
 ;; Open Emacs config dir
 (global-set-key (kbd "C-c e") 'open-my-config-dir)
