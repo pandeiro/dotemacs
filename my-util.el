@@ -132,4 +132,15 @@ mini-buffer. Gives totals for up to point, from point to end of buffer, and tota
       (set-mark-command 4)
       (message (concat dir " inserted below")))))
 
+(defun delete-file-of-current-buffer (&optional no-prompt)
+  "Prompts to delete the current buffer's file. If prefix argument is
+used, deletes the file without prompting."
+  (interactive "P")
+  (let ((file (buffer-file-name)))
+    (when (or no-prompt (y-or-n-p "Delete?"))
+      (progn
+	(delete-file file)
+	(kill-buffer)
+	(message "Deleted %s" file)))))
+
 (provide 'my-util)
