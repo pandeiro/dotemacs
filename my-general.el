@@ -49,6 +49,11 @@
                                      nil require-match initial-input hist def))
         ad-do-it))))
 
+;; Enable narrowing
+(put 'narrow-to-region 'disabled nil)
+(put 'narrow-to-defun 'disabled nil)
+(put 'narrow-to-page 'disabled nil)
+
 ;; Emacs adjustments made here, bound to C-c e
 (defun open-my-config-dir ()
   (interactive)
