@@ -12,6 +12,7 @@
 
 (require 'saveplace)
 (setq-default save-place t)
+(setq save-place-file "~/.emacs.d/saved-places")
 
 ;; No backups and autosave files, please
 (setq make-backup-files nil)

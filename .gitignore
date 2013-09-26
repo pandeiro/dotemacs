@@ -21,3 +21,5 @@ startup.org
 .netrc
 
 var/pcache/*
+
+saved-places
