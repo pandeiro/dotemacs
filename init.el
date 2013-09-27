@@ -52,3 +52,5 @@
 (require 'my-erc)
 (require 'my-scratch)
 (require 'my-c)
+(require 'my-elisp)
+
