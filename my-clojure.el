@@ -11,7 +11,6 @@
   (DELETE 2)
   (HEAD 2)
   (ANY 2)
-  (context 2)
   (save-view 1)
   (view-server-fns 1))
 
