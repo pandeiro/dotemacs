@@ -35,7 +35,12 @@
 		      solarized-theme
 		      gist
 		      skewer-mode
-		      s))
+		      s
+		      dash
+		      scratch
+		      popwin
+		      deferred
+		      request))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
