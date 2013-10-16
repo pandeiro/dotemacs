@@ -165,4 +165,7 @@ if use-rhino-repl has been invoked")
 
 (add-hook 'clojure-mode-hook 'add-pretty-lambdas-etc)
 
+;; Use subword-mode for camelCase stuff
+(add-hook 'clojure-mode 'subword-mode)
+
 (provide 'my-clojure)
