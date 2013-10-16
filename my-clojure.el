@@ -133,6 +133,9 @@ if use-rhino-repl has been invoked")
 ;; Use clojure-mode for ClojureScript
 (add-to-list 'auto-mode-alist '("\\.cljs\\'" . clojure-mode))
 
+;; Use clojure-mode for EDN
+(add-to-list 'auto-mode-alist '("\\.edn\\'" . clojure-mode))
+
 ;; Open a Clojure REPL with all the basic libs from the $HOME/rt/clj project
 (defun clojure-open-nrepl ()
   (interactive)
