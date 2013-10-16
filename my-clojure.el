@@ -130,6 +130,9 @@ if use-rhino-repl has been invoked")
 ;; Treat cljx like clj
 (add-to-list 'auto-mode-alist '("\\.cljx\\'" . clojure-mode))
 
+;; Use clojure-mode for ClojureScript
+(add-to-list 'auto-mode-alist '("\\.cljs\\'" . clojure-mode))
+
 ;; Open a Clojure REPL with all the basic libs from the $HOME/rt/clj project
 (defun clojure-open-nrepl ()
   (interactive)
@@ -158,6 +161,5 @@ if use-rhino-repl has been invoked")
 	       nil))))))
 
 (add-hook 'clojure-mode-hook 'add-pretty-lambdas-etc)
-(add-hook 'clojurescript-mode-hook 'add-pretty-lambdas-etc)
 
 (provide 'my-clojure)

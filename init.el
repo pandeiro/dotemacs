@@ -17,7 +17,6 @@
   (package-refresh-contents))
 
 (defvar my-packages '(clojure-mode
-		      clojurescript-mode
 		      nrepl
 		      auto-complete
 		      ac-nrepl
