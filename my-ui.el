@@ -66,4 +66,8 @@
 (workgroups-mode 1)
 (wg-load "~/.config/emacs/workgroups.el")
 
+;; Use popwin
+(require 'popwin)
+(popwin-mode 1)
+
 (provide 'my-ui)
