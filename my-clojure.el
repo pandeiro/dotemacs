@@ -139,26 +139,25 @@ if use-rhino-repl has been invoked")
     (nrepl-jack-in)
     (cd current-dir)))
 
-;; Taken from Emacs Live
-(eval-after-load 'clojure-mode
-  '(font-lock-add-keywords
-    'clojure-mode `(("(\\(fn\\)[\[[:space:]]"
-                     (0 (progn (compose-region (match-beginning 1)
-                                               (match-end 1) "λ")
-                               nil))))))
+(defun add-pretty-lambdas-etc ()
+  "Stolen from emacs-live: changes lambdas and sets to greek symbols"
+  (font-lock-add-keywords
+   nil `(("(\\(fn\\)[\[[:space:]]"
+	  (0 (progn
+	       (compose-region (match-beginning 1) (match-end 1) "λ")
+	       nil)))))
+  (font-lock-add-keywords
+   nil `(("\\(#\\)("
+	  (0 (progn
+	       (compose-region (match-beginning 1) (match-end 1) "ƒ")
+	       nil)))))
+  (font-lock-add-keywords
+   nil `(("\\(#\\){"
+	  (0 (progn
+	       (compose-region (match-beginning 1) (match-end 1) "∈")
+	       nil))))))
 
-(eval-after-load 'clojure-mode
-  '(font-lock-add-keywords
-    'clojure-mode `(("\\(#\\)("
-                     (0 (progn (compose-region (match-beginning 1)
-                                               (match-end 1) "ƒ")
-                               nil))))))
-
-(eval-after-load 'clojure-mode
-  '(font-lock-add-keywords
-    'clojure-mode `(("\\(#\\){"
-                     (0 (progn (compose-region (match-beginning 1)
-                                               (match-end 1) "∈")
-                               nil))))))
+(add-hook 'clojure-mode-hook 'add-pretty-lambdas-etc)
+(add-hook 'clojurescript-mode-hook 'add-pretty-lambdas-etc)
 
 (provide 'my-clojure)
