@@ -9,6 +9,9 @@
 ;; Custom scrollbars now defined in ~/.config/gtk-3.0/gtk.css
 ;(scroll-bar-mode -1)
 
+;; Don't show startup screen
+(setq inhibit-startup-screen 1)
+
 ;; Parenthesis matching
 (show-paren-mode t)
 
