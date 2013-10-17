@@ -35,4 +35,31 @@
 ;; Interactive browser development
 (setq httpd-root "~/rt/browser")
 
+(defun browse-default-app ()
+  (interactive)
+  (shell-command "webapp &"))
+
+(define-key html-mode-map (kbd "C-x C-e") 'browse-default-app)
+
+(defun start-httpd ()
+  "Begins the simple HTTP server and initiates skewer for live
+JavaScript (etc) evaluation in the browser."
+  (interactive)
+  (httpd-start)
+  (with-temp-buffer (skewer-mode)))
+
+;; dirty hack for quick HTML "eval" from html-mode buffers
+;; via skewer
+(defun stick-in-div-wrapper ()
+  "Just stick the HTML contents of any buffer in div#wrapper (minus
+the linebreaks, which break skewer)"
+  (interactive)
+  (skewer-eval-synchronously
+   (concat "document.querySelector('div#wrapper').innerHTML = '"
+	   (s-replace "
+"
+		      ""
+		      (buffer-substring-no-properties (point-min) (point-max))) "'")))
+
+(define-key html-mode-map (kbd "C-M-x") 'stick-in-div-wrapper)
 (provide 'my-webdev)
