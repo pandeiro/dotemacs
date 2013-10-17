@@ -62,4 +62,8 @@ the linebreaks, which break skewer)"
 		      (buffer-substring-no-properties (point-min) (point-max))) "'")))
 
 (define-key html-mode-map (kbd "C-M-x") 'stick-in-div-wrapper)
+
+;; Use subword-mode in js2-mode
+(add-hook 'js2-mode-hook 'subword-mode)
+
 (provide 'my-webdev)
