@@ -12,10 +12,6 @@
 
 ;; todo: customize elnode-webserver-index-file-template & elnode-webserver-index-page-template
 
-;; Use nodejs as inferior javascript process
-(require 'js-comint)
-(setq inferior-js-program-command "node")
-
 ;; Fix nodejs prompt
 (setq inferior-js-mode-hook
       (lambda ()
