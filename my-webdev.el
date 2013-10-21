@@ -56,6 +56,27 @@ the linebreaks, which break skewer)"
 		      (buffer-substring-no-properties (point-min) (point-max))) "'")))
 
 
+;; Start quickly
+(defvar html-boilerplate
+  "<!doctype html>
+<html>
+  <head>
+    <meta charset=\"utf-8\">
+    <title></title>
+    <link rel=\"stylesheet\" href=\"css/styles.css\">
+  </head>
+  <body>
+    <div id=\"wrapper\"></div>
+    <script src=\"//d3js.org/d3.v3.min.js\"></script>
+    <script src=\"//underscorejs.org/underscore-min.js\"></script>
+    <script src=\"//code.jquery.com/jquery.min.js\"></script>
+  </body>
+</html>"
+  "Basic HTML document template, sin fritz")
+
+(defun insert-html-boilerplate ()
+  (interactive)
+  (insert html-boilerplate))
 ;; Use subword-mode in js2-mode
 (add-hook 'js2-mode-hook 'subword-mode)
 
