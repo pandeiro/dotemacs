@@ -35,10 +35,6 @@
   (interactive)
   (shell-command "webapp &"))
 
-(require 'sgml-mode)
-
-(define-key html-mode-map (kbd "C-x C-e") 'browse-default-app)
-
 (defun start-httpd ()
   "Begins the simple HTTP server and initiates skewer for live
 JavaScript (etc) evaluation in the browser."
@@ -59,7 +55,6 @@ the linebreaks, which break skewer)"
 		      ""
 		      (buffer-substring-no-properties (point-min) (point-max))) "'")))
 
-(define-key html-mode-map (kbd "C-M-x") 'stick-in-div-wrapper)
 
 ;; Use subword-mode in js2-mode
 (add-hook 'js2-mode-hook 'subword-mode)
