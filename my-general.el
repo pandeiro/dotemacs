@@ -14,6 +14,16 @@
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/saved-places")
 
+;; Use recentf mode to keep track of what I open
+(recentf-mode 1)
+(setq recentf-exclude (list ".ido.last"))
+
+(defun my-find-file (&optional prefix)
+  (interactive "P")
+  (if prefix
+      (recentf-open-files)
+    (call-interactively 'ido-find-file)))
+
 ;; No backups and autosave files, please
 (setq make-backup-files nil)
 (auto-save-mode -1)
