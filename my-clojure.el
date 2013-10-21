@@ -168,4 +168,18 @@ if use-rhino-repl has been invoked")
 ;; Use subword-mode for camelCase stuff
 (add-hook 'clojure-mode 'subword-mode)
 
+;; ClojureScript via nREPL/piggieback
+(defvar piggieback-boilerplate
+  "(require 'clojure.tools.nrepl.server 'cemerick.piggieback
+            'cljs.repl.browser)
+
+   (cemerick.piggieback/cljs-repl
+    :repl-env (cljs.repl.browser/repl-env :port 9000))")
+
+(defun inject-piggieback-connection ()
+  "Turn nREPL buffer into ClojureScript browser REPL. Requires that
+the current nREPL project include piggieback as a dependency."
+  (interactive)
+  (nrepl-send-string-sync piggieback-boilerplate))
+
 (provide 'my-clojure)
