@@ -13,10 +13,13 @@
 (global-set-key (kbd "C-c p") 'previous-logical-line)
 (global-set-key (kbd "C-c r") 'clojure-open-nrepl)
 (global-set-key (kbd "C-c l") 'goto-line)
-(global-set-key (kbd "C-c C-d") 'delete-file-of-current-buffer)
+(global-set-key (kbd "C-c C-d") 'delete-file-of-current-buffer) ;; FIXME sgml mode coopted
 
 ;; Open Emacs config dir
 (global-set-key (kbd "C-c e") 'open-my-config-dir)
+
+;; Open recent files menu
+(global-set-key (kbd "C-x C-f") 'my-find-file) ;; defined in my-general.el
 
 ;; Load and save desktops
 (global-set-key (kbd "C-c d") 'desktop-read)
