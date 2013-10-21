@@ -77,6 +77,13 @@ the linebreaks, which break skewer)"
 (defun insert-html-boilerplate ()
   (interactive)
   (insert html-boilerplate))
+
+(eval-after-load "sgml-mode"
+  '(progn
+     (define-key html-mode-map (kbd "C-x C-e") 'browse-default-app)
+     (define-key html-mode-map (kbd "C-M-x") 'stick-in-div-wrapper)
+     (define-key html-mode-map (kbd "C-c i") 'insert-html-boilerplate)))
+
 ;; Use subword-mode in js2-mode
 (add-hook 'js2-mode-hook 'subword-mode)
 
