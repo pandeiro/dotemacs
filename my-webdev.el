@@ -35,6 +35,8 @@
   (interactive)
   (shell-command "webapp &"))
 
+(require 'sgml-mode)
+
 (define-key html-mode-map (kbd "C-x C-e") 'browse-default-app)
 
 (defun start-httpd ()
