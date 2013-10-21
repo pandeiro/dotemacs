@@ -87,4 +87,7 @@ the linebreaks, which break skewer)"
 ;; Use subword-mode in js2-mode
 (add-hook 'js2-mode-hook 'subword-mode)
 
+;; Use emmet in html-mode
+(add-hook 'html-mode-hook 'emmet-mode)
+
 (provide 'my-webdev)
