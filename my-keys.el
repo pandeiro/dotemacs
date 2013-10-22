@@ -14,6 +14,7 @@
 (global-set-key (kbd "C-c r") 'clojure-open-nrepl)
 (global-set-key (kbd "C-c l") 'goto-line)
 (global-set-key (kbd "C-c C-d") 'delete-file-of-current-buffer) ;; FIXME sgml mode coopted
+(global-set-key (kbd "C-c x") 'scratch)
 
 ;; Open Emacs config dir
 (global-set-key (kbd "C-c e") 'open-my-config-dir)
