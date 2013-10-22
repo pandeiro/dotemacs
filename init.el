@@ -35,6 +35,7 @@
 		      skewer-mode
 		      s
 		      dash
+		      dash-functional
 		      scratch
 		      popwin
 		      deferred
