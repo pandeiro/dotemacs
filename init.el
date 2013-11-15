@@ -39,7 +39,8 @@
 		      scratch
 		      popwin
 		      deferred
-		      request))
+		      request
+		      livid-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
