@@ -56,4 +56,5 @@
 (require 'my-erc)
 (require 'my-c)
 (require 'my-elisp)
+(require 'my-yas)
 
