@@ -1,7 +1,7 @@
 ;; JavaScript 2-space indent
 (setq js-indent-level 2)
 (setq js2-basic-offset 2) ; js2-mode equivalent
-(setq js2-bounce-indent-p t)
+;(setq js2-bounce-indent-p t)
 
 ;; Turn on rainbow-mode automatically with css-mode
 (defun in-rainbows () (rainbow-mode 1))
