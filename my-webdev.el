@@ -56,38 +56,30 @@ the linebreaks, which break skewer)"
 		      (buffer-substring-no-properties (point-min) (point-max))) "'")))
 
 
-;; Start quickly
-(defvar html-boilerplate
-  "<!doctype html>
-<html>
-  <head>
-    <meta charset=\"utf-8\">
-    <title></title>
-    <link rel=\"stylesheet\" href=\"css/styles.css\">
-  </head>
-  <body>
-    <div id=\"wrapper\"></div>
-    <script src=\"//d3js.org/d3.v3.min.js\"></script>
-    <script src=\"//underscorejs.org/underscore-min.js\"></script>
-    <script src=\"//code.jquery.com/jquery.min.js\"></script>
-  </body>
-</html>"
-  "Basic HTML document template, sin fritz")
-
-(defun insert-html-boilerplate ()
-  (interactive)
-  (insert html-boilerplate))
-
 (eval-after-load "sgml-mode"
   '(progn
      (define-key html-mode-map (kbd "C-x C-e") 'browse-default-app)
      (define-key html-mode-map (kbd "C-M-x") 'stick-in-div-wrapper)
-     (define-key html-mode-map (kbd "C-c i") 'insert-html-boilerplate)))
+     (define-key html-mode-map (kbd "C-c C-d") 'ng-snip-show-docs-at-point)))
 
 ;; Use subword-mode in js2-mode
 (add-hook 'js2-mode-hook 'subword-mode)
 
 ;; Use emmet in html-mode
 (add-hook 'html-mode-hook 'emmet-mode)
+
+;; fix yas in js2
+(defun js2-tab-properly ()
+  "Fucking fuck why won't shit work!?"
+  (interactive)
+  (let ((yas-fallback-behavior 'return-nil))
+    (unless (yas-expand)
+      (indent-for-tab-command)
+      (if (looking-back "^\s*")
+          (back-to-indentation)))))
+
+(eval-after-load 'js2-mode
+  '(progn
+     (define-key js2-mode-map (kbd "TAB") 'js2-tab-properly)))
 
 (provide 'my-webdev)
