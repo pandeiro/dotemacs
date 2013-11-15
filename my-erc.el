@@ -3,7 +3,7 @@
 (setq erc-autojoin-channels-alist
       '(("freenode.net" "#emacs" "#org-mode" "#clojure" "##javascript" "#archlinux"
 	 "##linux" "#bash" "#git" "#html5" "##twitter-bootstrap" "#couchdb" "#go-nuts"
-	 "#angularjs")
+	 "#angularjs" "#d3.js")
 	("oftc.net" "#awesome")))
 
 ;; http://emacs-fu.blogspot.com/2009/06/erc-emacs-irc-client.html
