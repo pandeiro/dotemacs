@@ -17,6 +17,7 @@
 ;; Use recentf mode to keep track of what I open
 (recentf-mode 1)
 (setq recentf-exclude (list ".ido.last"))
+(setq recentf-max-saved-items 50)
 
 (defun my-find-file (&optional prefix)
   (interactive "P")
@@ -141,5 +142,9 @@
   (define-key global-map (this-command-keys)
     'toggle-kbd-macro-recording-on)
   (end-kbd-macro))
+
+;; Better unique buffer names
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
 
 (provide 'my-general)

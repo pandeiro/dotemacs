@@ -15,8 +15,21 @@
 ;; Parenthesis matching
 (show-paren-mode t)
 
+;; Show column position
+(setq column-number-mode t)
+
 ;; Default font
 (set-face-attribute 'default nil :height 100 :family "Inconsolata")
+
+;; Autofill where appropriate
+(defun ui-setup-auto-fill ()
+  (auto-fill-mode 1)
+  (setq fill-column 80))
+(eval-after-load 'markdown-mode
+  (add-hook 'markdown-mode-hook 'ui-setup-auto-fill))
+(eval-after-load 'org-mode
+  (add-hook 'org-mode-hook 'ui-setup-auto-fill))
+(add-hook 'text-mode-hook 'ui-setup-auto-fill)
 
 ;; Blinking bar cursor, invisible in non-selected windows
 (setq cursor-in-non-selected-windows nil)
@@ -98,5 +111,8 @@
         ("*Kill Ring*" :height 30)
         ("*Compile-Log*" :height 30 :stick t)
         ("*git-gutter:diff*" :height 30 :stick t)))
+
+;; Use winner-mode to be able to undo/redo window layouts
+(winner-mode 1)
 
 (provide 'my-ui)
