@@ -70,7 +70,6 @@ the linebreaks, which break skewer)"
 
 ;; fix yas in js2
 (defun js2-tab-properly ()
-  "Fucking fuck why won't shit work!?"
   (interactive)
   (let ((yas-fallback-behavior 'return-nil))
     (unless (yas-expand)
