@@ -81,4 +81,9 @@ the linebreaks, which break skewer)"
   '(progn
      (define-key js2-mode-map (kbd "TAB") 'js2-tab-properly)))
 
+(defun webdev-save-and-refresh ()
+  (interactive)
+  (save-buffer (current-buffer))
+  (skewer-eval "window.location.href = window.location.href"))
+
 (provide 'my-webdev)
