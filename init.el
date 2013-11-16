@@ -11,8 +11,6 @@
 	     '("melpa" .  "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
-;; More stealing from technomancy
-(setq marmalade-server "http://marmalade-repo.org/")
 (when (null package-archive-contents)
   (package-refresh-contents))
 
