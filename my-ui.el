@@ -115,4 +115,9 @@
 ;; Use winner-mode to be able to undo/redo window layouts
 (winner-mode 1)
 
+;; Setup auto-complete
+(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
+
 (provide 'my-ui)
