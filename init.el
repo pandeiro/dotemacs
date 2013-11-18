@@ -27,6 +27,7 @@
 		      nodejs-repl
 		      go-mode
 		      markdown-mode
+		      pandoc-mode
 		      rainbow-mode
 		      solarized-theme
 		      gist
