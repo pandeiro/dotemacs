@@ -81,6 +81,8 @@ the linebreaks, which break skewer)"
   '(progn
      (define-key js2-mode-map (kbd "TAB") 'js2-tab-properly)))
 
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+
 (defun webdev-save-and-refresh ()
   (interactive)
   (save-buffer (current-buffer))
