@@ -115,6 +115,17 @@
 ;; Use winner-mode to be able to undo/redo window layouts
 (winner-mode 1)
 
+;; Could people please start working on the features that are needed?
+(defun line-spacing-toggle ()
+  "Toggle line-spacing between single and AMOUNT (defaults to 12)"
+  (interactive)
+  (setq line-spacing (if line-spacing nil 1.33)))
+
+(defun big-fringe-toggle ()
+  "Wordprocessory margins"
+  (interactive)
+  (set-fringe-mode (if (equal '(0 . 0) fringe-mode) '(30 . 20) '(0 . 0))))
+
 ;; Setup auto-complete
 (require 'auto-complete)
 (require 'auto-complete-config)
