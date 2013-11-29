@@ -42,6 +42,11 @@ JavaScript (etc) evaluation in the browser."
   (httpd-start)
   (with-temp-buffer (skewer-mode)))
 
+(defun serve-directory (dir)
+  "Makes the chosen directory the httpd root"
+  (interactive (list (ido-read-directory-name "Serve: ")))
+  (setq httpd-root dir))
+
 ;; dirty hack for quick HTML "eval" from html-mode buffers
 ;; via skewer
 (defun stick-in-div-wrapper ()
