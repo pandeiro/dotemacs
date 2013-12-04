@@ -47,6 +47,9 @@
 (global-set-key (kbd "C-S-<left>") 'windmove-left)
 (global-set-key (kbd "C-S-<right>") 'windmove-right)
 
+;; https://github.com/magnars/expand-region.el
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ; Dired stuff
 (add-hook 'dired-mode-hook
 	  (lambda ()

@@ -35,6 +35,7 @@
 		      s
 		      dash
 		      dash-functional
+		      expand-region
 		      scratch
 		      popwin
 		      deferred

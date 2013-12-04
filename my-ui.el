@@ -126,6 +126,9 @@
   (interactive)
   (set-fringe-mode (if (equal '(0 . 0) fringe-mode) '(30 . 20) '(0 . 0))))
 
+;; Expand region
+(require 'expand-region)
+
 ;; Setup auto-complete
 (require 'auto-complete)
 (require 'auto-complete-config)
