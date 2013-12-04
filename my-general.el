@@ -147,4 +147,7 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+;; Can't count on "American typists" anymore
+(setq sentence-end-double-space nil)
+
 (provide 'my-general)
