@@ -150,4 +150,7 @@
 ;; Can't count on "American typists" anymore
 (setq sentence-end-double-space nil)
 
+;; Replace selection when typing, like GUI editors do
+(delete-selection-mode)
+
 (provide 'my-general)
