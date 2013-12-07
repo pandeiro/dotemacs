@@ -23,3 +23,6 @@ startup.org
 var/pcache/*
 
 saved-places
+/.litable-lists.el
+/newsticker/*
+/request/*
