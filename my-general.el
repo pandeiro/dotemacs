@@ -5,10 +5,11 @@
 (setq desktop-path (list "~/.config/emacs"))
 (setq desktop-dirname "~/.config/emacs")
 (setq desktop-base-file-name "desktop.el")
-(defun save-desktop-to-default-location ()
-  "Saves the buffer list as a desktop file to the default location and releases the desktop file lock"
-  (interactive)
-  (desktop-save desktop-dirname t))
+
+(defun desktop-load (directory)
+  "Like desktop-read, but prompts for a directory"
+  (interactive (list (ido-read-directory-name "Desktop directory: ")))
+  (desktop-read directory))
 
 (require 'saveplace)
 (setq-default save-place t)
